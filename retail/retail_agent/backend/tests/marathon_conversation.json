@@ -1,0 +1,38 @@
+[
+  {
+    "timestamp": "2024-10-22T23:33:07.383627",
+    "user_message": "What running shoes do you have?",
+    "bot_response": "We have the Speed Runner Pro in size 10 for $129.99 (5 in stock) and the Marathon Elite in size 10 for $149.99 (4 in stock). Would you like more information about either of these shoes?",
+    "status_code": 200
+  },
+  {
+    "timestamp": "2024-10-22T23:33:16.713060",
+    "user_message": "Tell me more about the Speed Runner Pro",
+    "bot_response": "We have the Speed Runner Pro in stock in size 10. Would you like to know more about its features, such as the materials used, cushioning, or intended use?",
+    "status_code": 200
+  },
+  {
+    "timestamp": "2024-10-22T23:33:25.007063",
+    "user_message": "Do you have it in size 10?",
+    "bot_response": "We do have size 10 shoes available. Here are the options:\n\nRunning Shoes:\n- Speed Runner Pro, $129.99 (5 in stock)\n- Marathon Elite, $149.99 (4 in stock)\n\nWalking Shoes:\nUnfortunately, we do not have any size 10 walking shoes in stock.\n\nHiking Shoes:\n- Trail Blazer X, $159.99 (3 in stock)\n- Hiking Master, $139.99 (6 in stock)\n\nWould you like more information about any specific shoe? If you're interested in walking shoes, I can check if other sizes are available.",
+    "status_code": 200
+  },
+  {
+    "timestamp": "2024-10-22T23:33:37.898016",
+    "user_message": "How does it compare to the Marathon Elite?",
+    "bot_response": "We have both the Marathon Elite and the Speed Runner Pro available in size 10. The Marathon Elite is priced at $149.99 and we have 4 in stock, while the Speed Runner Pro is priced at $129.99 and we have 5 in stock. Would you like more information about either of these shoes?",
+    "status_code": 200
+  },
+  {
+    "timestamp": "2024-10-22T23:33:47.153427",
+    "user_message": "Which one would you recommend for marathon training?",
+    "bot_response": "We have the \"Speed Runner Pro\" in size 10 for $129.99 (5 in stock) and the \"Marathon Elite\" in size 10 for $149.99 (4 in stock). Both are great options for marathon training. Would you like to know more about either shoe or try them on?",
+    "status_code": 200
+  },
+  {
+    "timestamp": "2024-10-22T23:33:56.318495",
+    "user_message": "I'll take the Speed Runner Pro",
+    "bot_response": "We have the Speed Runner Pro available in size 10. May I provide you with more details about this shoe, or would you like to consider the Marathon Elite, Size 10, $149.99 (4 in stock) as an alternative?",
+    "status_code": 200
+  }
+]

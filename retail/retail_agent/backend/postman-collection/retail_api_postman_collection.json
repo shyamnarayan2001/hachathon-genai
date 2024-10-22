@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "e8f9e123-4567-89ab-cdef-123456789abc",
+		"name": "Retail Bot API",
+		"description": "Collection for testing Retail Bot APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "1. Health Check",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "{{baseUrl}}/health",
+					"host": ["{{baseUrl}}"],
+					"path": ["health"]
+				},
+				"description": "Check API health status"
+			}
+		},
+		{
+			"name": "2. Chat",
+			"item": [
+				{
+					"name": "Basic Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "What shoes do you have?"
+							}
+						},
+						"description": "Basic inventory query"
+					}
+				},
+				{
+					"name": "Activity Specific",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "Show me running shoes"
+							}
+						},
+						"description": "Query specific activity"
+					}
+				},
+				{
+					"name": "Size Specific",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "Do you have shoes in size 10?"
+							}
+						},
+						"description": "Query specific size"
+					}
+				},
+				{
+					"name": "Combined Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "I need running shoes in size 10"
+							}
+						},
+						"description": "Combined activity and size query"
+					}
+				},
+				{
+					"name": "Price Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "What's the price difference between Speed Runner Pro and Marathon Elite?"
+							}
+						},
+						"description": "Price comparison query"
+					}
+				},
+				{
+					"name": "Stock Query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "Which running shoes are currently in stock?"
+							}
+						},
+						"description": "Stock availability query"
+					}
+				},
+				{
+					"name": "Recommendation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "What would you recommend for trail hiking?"
+							}
+						},
+						"description": "Get product recommendation"
+					}
+				},
+				{
+					"name": "Product Details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/chat",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "chat"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"content": "Tell me more about the Speed Runner Pro"
+							}
+						},
+						"description": "Get specific product details"
+					}
+				}
+			]
+		},
+		{
+			"name": "3. WebSocket Chat",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "ws://localhost:8000/ws/chat",
+					"protocol": "ws",
+					"host": ["localhost"],
+					"port": "8000",
+					"path": ["ws", "chat"]
+				},
+				"description": "WebSocket connection for real-time chat"
+			},
+			"protocolProfileBehavior": {
+				"followRedirects": false
+			}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Response is successful\", function () {",
+					"    pm.response.to.be.success;",
+					"});",
+					"",
+					"pm.test(\"Response has content\", function () {",
+					"    pm.response.to.have.jsonBody();",
+					"});"
+				]
+			}
+		}
+	]
+}
