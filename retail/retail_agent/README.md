@@ -22,8 +22,11 @@ A modern, AI-powered retail chatbot that helps customers find and purchase shoes
 
 ## Architecture
 
+![Architecture](../retail_agent/images/architecture.png)
+
+## Project Structure
 ```
-retail_bot/
+retail_agent/
 ├── backend/            # FastAPI backend
 │   ├── app/
 │   │   ├── main.py    # Main application
