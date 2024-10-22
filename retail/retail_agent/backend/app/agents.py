@@ -1,4 +1,3 @@
-# backend/app/agents.py
 from langchain.agents import AgentExecutor, create_react_agent
 from langchain.prompts import PromptTemplate
 from langchain_groq import ChatGroq

@@ -1,4 +1,3 @@
-# backend/app/db.py
 import aiosqlite
 from contextlib import asynccontextmanager
 from typing import Dict, List, Any, Optional

@@ -1,4 +1,3 @@
-# backend/app/models.py
 from pydantic import BaseModel, Field
 from typing import Optional, List, Any, Dict
 from datetime import datetime
